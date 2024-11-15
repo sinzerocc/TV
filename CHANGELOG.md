@@ -1,5 +1,78 @@
 # 更新日志（Changelog）
 
+## v1.5.2
+
+### 2024/11/15
+
+- ✨ 新增各省份地方台
+- ✨ 新增控制显示无结果频道分类配置（open_empty_category）（#551）
+- ✨ 调整接口源（#526）
+- 🪄 优化频道数据插入速度
+- 🪄 优化 IPv6 测速逻辑，解决无结果问题
+- 🪄 优化页面服务启动与 docker 定时任务日志输出
+- 🪄 调整默认配置：接口数量 urls_limit=10 等数量配置，增加订阅源
+- 🐛 修复运行停止问题（#527）
+- 🐛 修复 Win7 GUI 启动问题（#536）
+- 🗑️ 移除部分无效订阅源
+- 🗑️ 移除域名黑名单配置（domain_blacklist），请使用接口关键字黑名单（url_keywords_blacklist）替代
+
+<details>
+  <summary>English</summary>
+
+- ✨ Added local channels for each province.
+- ✨ Added configuration to control the display of the No Results Channel Category (open_empty_category) (#551).
+- ✨ Adjusted interface sources (#526).
+- 🪄 Optimized the speed of channel data insertion.
+- 🪄 Optimized IPv6 speed test logic to resolve no results issues.
+- 🪄 Optimized page service startup and Docker scheduled task log output.
+- 🪄 Adjusted default configurations: number of interfaces urls_limit=10, etc., and added subscription sources.
+- 🐛 Fixed the issue of the program stopping (#527).
+- 🐛 Fixed the issue of Win7 GUI startup (#536).
+- 🗑️ Removed some invalid subscription sources.
+- 🗑️ Removed the domain blacklist configuration (domain_blacklist). Please use the interface keyword blacklist (url_keywords_blacklist) instead.
+
+</details>
+
+## v1.5.1
+
+### 2024/11/5
+
+- ✨ 新增频道接口白名单：不参与测速，永远保留在结果最前面（#470）
+  使用方法：
+  1. 模板频道接口地址后添加$!即可实现（如：广东珠江,http://xxx.m3u$! ）
+  2. 额外信息补充（如：广东珠江,http://xxx.m3u$!额外信息 ），更多接口白名单请至https://github.com/Guovin/TV/issues/514 讨论
+- ✨ 新增 🈳 无结果频道分类：无结果频道默认归类至该底部分类下（#473）
+- ✨ 接口地址增加来源类型说明
+- ✨ 默认模板增加广东民生（#481）、广州综合（#504）
+- 🪄 优化偏好结果输出
+- 🪄 重构配置读取与增加全局常量
+- 🐛 修复部分接口匹配失败问题
+- 🐛 修复更新结果为空等问题（#464，#467）
+- 🐛 修复接口地址复制空格问题（#472 by:@haohaitao）
+- 🐛 修复结果日志 unpack error
+- 🐛 修复结果接口信息为空问题（#505）
+- 🗑️ 移除仓库根目录 txt 结果文件，请至 output 目录下查看结果文件
+
+<details>
+  <summary>English</summary>
+
+- ✨ Added channel interface whitelist: Not participating in speed testing, always kept at the very front of the results. (#470)
+  Usage:
+  1. Add $! after the template channel interface address (e.g., Guangdong Pearl River, http://xxx.m3u$!).
+  2. Additional information can be appended (e.g., Guangdong Pearl River, http://xxx.m3u$! Additional Information) (#470). For more interface whitelists, please discuss at https://github.com/Guovin/TV/issues/514.
+- ✨ Added 🈳 No Results Channel Category: Channels without results are categorized under this bottom category by default (#473).
+- ✨ Interface addresses now include source type descriptions.
+- ✨ Default templates now include Guangdong People's Livelihood (#481) and Guangzhou Comprehensive (#504).
+- 🪄 Optimized preferred result output.
+- 🪄 Refactored configuration reading and added global constants.
+- 🐛 Fixed issues with partial interface matching failures.
+- 🐛 Fixed problems with empty update results, etc. (#464, #467).
+- 🐛 Fixed the issue of spaces being copied with the interface address (#472 by:@haohaitao).
+- 🐛 Fixed the unpack error in result logs.
+- 🐛 Fixed the issue of empty interface information in results (#505).
+- 🗑️ Removed txt result files from the repository root directory. Please check the result files in the output directory.
+</details>
+
 ## v1.5.0
 
 ### 2024/10/25
